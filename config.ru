@@ -1,3 +1,7 @@
+require 'bundler'
+
+Bundler.require(:default, ENV['RACK_ENV'])
+
 use Rack::Static,
   :urls => ["/assets"],
   :root => "public"
